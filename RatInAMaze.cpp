@@ -1,3 +1,4 @@
+//Rat In A Maze Problem
 #include <iostream>
 #include <vector>
 #include <cstdlib> 
@@ -108,6 +109,14 @@ int main() {
     int n,choice;
     cout << "Enter maze size (n x n): ";
     cin >> n;
+    if(n==0){
+        cout<<"Maze cannot be empty, exiting program!!!"<<endl;
+        return 0;
+    }
+    else if(n==1){
+        cout<<"Maze size should be more than one, exiting program!!!"<<endl;
+        return 0;
+    }
     vector<vector<int>> mat(n, vector<int>(n));
 
     cout << "Choose Maze Input Method:\n";
